@@ -37,7 +37,7 @@ class LinearRegression:
         # Actual formula = 2 / n * summation of ( diff * inputs )
         gradient_slope = 2 * (np.mean(np.multiply(self.dependentVars, diff)))
         # Actual formula = 2 / n * summation of (ypred - yreal) i.e diff
-        gradient_intercept = 2 * (np.mean(predictions - self.outputs))
+        gradient_intercept = 2 * (np.mean(diff))
 
         self.slope -= self.lr * gradient_slope
         self.intercept -= self.lr * gradient_intercept
